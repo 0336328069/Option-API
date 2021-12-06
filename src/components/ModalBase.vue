@@ -3,13 +3,13 @@
         <div class="modal-dialog">
             <div class="modal-content" :class="{'bg-red': theme === 'contact'}">
                 <div class="modal-header">
-									<p>{{ title }}</p>
+                    <slot name="header"></slot>
                 </div>
                 <div class="modal-body">
-									<p>{{ content }}</p>
+					<slot/>
                 </div>
                 <div class="modal-footer">
-									<p>Footer</p>
+					<slot name="footer"></slot>
                 </div>
             </div>
         </div>
